@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LV BizSoft - Soluciones Empresariales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        const translations = {
+            "es": {
+                "hero_title": "Automatiza tu negocio con Odoo",
+                "company_name": "LV BizSoft - Soluciones Empresariales.",
+                "hero_subtitle": "Soluciones para preparadores de impuestos, barberías, realtors y más.",
+                "cta_demo": "Agenda tu Demo",
+                "why_choose": "¿Por qué elegir LV BizSoft?",
+                "crm": "CRM Integrado",
+                "crm_desc": "Gestión de clientes y ventas de manera eficiente.",
+                "billing": "Facturación Automática",
+                "billing_desc": "Genera facturas y recibe pagos sin complicaciones.",
+                "appointments": "Agendamiento de Citas",
+                "appointments_desc": "Organiza tu tiempo y el de tus clientes con facilidad.",
+                "testimonials": "Lo que dicen nuestros clientes",
+                "testimonial_1": "LV BizSoft ha transformado mi negocio. Ahora gestiono mis clientes con facilidad.",
+                "testimonial_2": "Desde que uso LV BizSoft, mis procesos son más eficientes y ahorro tiempo.",
+                "testimonial_3": "La facturación automática y la agenda integrada han sido un cambio total para mí.",
+                "pricing": "Planes y Precios",
+                "basic_plan": "Plan Básico",
+                "standard_plan": "Plan Estándar",
+                "premium_plan": "Plan Premium",
+                "basic_price": "$49.99/mes",
+                "standard_price": "$74.99/mes",
+                "premium_price": "$99.99/mes",
+                "single_payment": "Opciones de Pago Único",
+                "setup_only": "Instalación Única",
+                "setup_support": "Instalación + Soporte 3 meses",
+                "setup_price": "$399 Pago Único",
+                "setup_support_price": "$699 Pago Único",
+                "contact_us": "Contáctanos",
+                "contact_text": "Agenda tu demo hoy mismo y descubre cómo LV BizSoft puede ayudarte.",
+                "footer": "Todos los derechos reservados.",
+            },
+            "en": {
+                "hero_title": "Automate your business with Odoo",
+                "company_name": "LV BizSoft - Business Solutions.",
+                "hero_subtitle": "Solutions for tax preparers, barbershops, realtors, and more.",
+                "cta_demo": "Schedule Your Demo",
+                "why_choose": "Why Choose LV BizSoft?",
+                "crm": "Integrated CRM",
+                "crm_desc": "Efficient client and sales management.",
+                "billing": "Automatic Billing",
+                "billing_desc": "Generate invoices and receive payments hassle-free.",
+                "appointments": "Appointment Scheduling",
+                "appointments_desc": "Easily manage your time and client appointments.",
+                "testimonials": "What Our Clients Say",
+                "testimonial_1": "LV BizSoft has transformed my business. Now I manage my clients with ease.",
+                "testimonial_2": "Since using LV BizSoft, my processes are more efficient, and I save time.",
+                "testimonial_3": "Automatic billing and integrated scheduling have been a total game changer for me.",
+                "pricing": "Plans and Pricing",
+                "basic_plan": "Basic Plan",
+                "standard_plan": "Standard Plan",
+                "premium_plan": "Premium Plan",
+                "basic_price": "$49.99/month",
+                "standard_price": "$74.99/month",
+                "premium_price": "$99.99/month",
+                "single_payment": "One-Time Payment Options",
+                "setup_only": "One-Time Setup",
+                "setup_support": "Setup + 3-Month Support",
+                "setup_price": "$399 One-Time Payment",
+                "setup_support_price": "$699 One-Time Payment",
+                "contact_us": "Contact Us",
+                "contact_text": "Schedule your demo today and see how LV BizSoft can help you.",
+                "footer": "All rights reserved.",
+            }
+        };
+
+        function changeLanguage(lang) {
+            document.querySelectorAll("[data-translate]").forEach(el => {
+                el.innerText = translations[lang][el.dataset.translate];
+            });
+        }
+    </script>
+</head>
+<body class="bg-gray-100" onload="changeLanguage('es')">
+    
+    <!-- Selector de Idioma -->
+    <div class="text-right p-4">
+        <button onclick="changeLanguage('es')" class="px-3 py-1 bg-gray-300 rounded">ES</button>
+        <button onclick="changeLanguage('en')" class="px-3 py-1 bg-gray-300 rounded">EN</button>
+    </div>
+    
+    <!-- Sección Hero -->
+    <section class="text-center py-20 bg-blue-500 text-white">
+        <h1 class="text-4xl font-bold" data-translate="company_name"></h1>
+        <h2 class="text-3xl font-bold" data-translate="hero_title"></h2>
+        <p class="mt-4 text-lg" data-translate="hero_subtitle"></p>
+        <a href="#contacto" class="mt-6 inline-block bg-white text-blue-600 px-6 py-3 rounded font-semibold" data-translate="cta_demo"></a>
+    </section>
+    
+    <!-- Beneficios -->
+    <section class="py-16 container mx-auto px-6 text-center">
+        <h3 class="text-3xl font-bold mb-10" data-translate="why_choose"></h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded shadow">
+                <h4 class="text-xl font-bold" data-translate="crm"></h4>
+                <p class="mt-2 text-gray-600" data-translate="crm_desc"></p>
+            </div>
+            <div class="bg-white p-6 rounded shadow">
+                <h4 class="text-xl font-bold" data-translate="billing"></h4>
+                <p class="mt-2 text-gray-600" data-translate="billing_desc"></p>
+            </div>
+            <div class="bg-white p-6 rounded shadow">
+                <h4 class="text-xl font-bold" data-translate="appointments"></h4>
+                <p class="mt-2 text-gray-600" data-translate="appointments_desc"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Precios -->
+    <section class="py-16 container mx-auto px-6 text-center">
+        <h3 class="text-3xl font-bold mb-10" data-translate="pricing"></h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded shadow">
+                <h4 class="text-xl font-bold" data-translate="basic_plan"></h4>
+                <p class="text-2xl font-bold mt-4" data-translate="basic_price"></p>
+            </div>
+            <div class="bg-white p-6 rounded shadow border-2 border-blue-600">
+                <h4 class="text-xl font-bold" data-translate="standard_plan"></h4>
+                <p class="text-2xl font-bold mt-4" data-translate="standard_price"></p>
+            </div>
+            <div class="bg-white p-6 rounded shadow">
+                <h4 class="text-xl font-bold" data-translate="premium_plan"></h4>
+                <p class="text-2xl font-bold mt-4" data-translate="premium_price"></p>
+            </div>
+        </div>
+        <div class="mt-12">
+            <h4 class="text-2xl font-bold" data-translate="single_payment"></h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+                <div class="bg-white p-6 rounded shadow">
+                    <h4 class="text-xl font-bold" data-translate="setup_only"></h4>
+                    <p class="text-2xl font-bold mt-4" data-translate="setup_price"></p>
+                </div>
+                <div class="bg-white p-6 rounded shadow">
+                    <h4 class="text-xl font-bold" data-translate="setup_support"></h4>
+                    <p class="text-2xl font-bold mt-4" data-translate="setup_support_price"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Testimonios -->
+    <section class="py-16 container mx-auto px-6 text-center">
+        <h3 class="text-3xl font-bold mb-10" data-translate="testimonials"></h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded shadow">
+                <p class="text-gray-600 italic" data-translate="testimonial_1"></p>
+            </div>
+            <div class="bg-white p-6 rounded shadow">
+                <p class="text-gray-600 italic" data-translate="testimonial_2"></p>
+            </div>
+            <div class="bg-white p-6 rounded shadow">
+                <p class="text-gray-600 italic" data-translate="testimonial_3"></p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contacto -->
+    <section id="contacto" class="py-16 bg-gray-200 text-center">
+        <h3 class="text-3xl font-bold mb-6" data-translate="contact_us"></h3>
+        <p class="text-lg text-gray-700" data-translate="contact_text"></p>
+        <a href="https://wa.me/+17604925616" class="mt-6 inline-block bg-green-500 text-white px-6 py-3 rounded font-semibold">WhatsApp</a>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="py-6 bg-blue-600 text-white text-center">
+        <p data-translate="footer"></p>
+    </footer>
+    
+</body>
+</html>
